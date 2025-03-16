@@ -1,17 +1,23 @@
 #include <iostream>
-#include <vector>
-
 using namespace std;
 
-void callme(int n)
-{
-    if (n == 0)
-        return;
-    cout << "Hello World" << endl;
-    callme(n - 1);
+int factorial (int n) {
+if (n == 0) {
+    return 1;
+}
+else {
+    return n * factorial(n-1);
+     }
+
 }
 
+
+
 int main() {
-    callme(5);
+    cout << "enter number: " << endl;
+    int n;
+    cin >> n;
+    int result = factorial (n);
+    cout << "Factorial of " << n << " is " << result << endl;
     return 0;
 }
